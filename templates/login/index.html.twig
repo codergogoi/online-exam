@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LoginController!{% endblock %}
+
+{% block body %}
+
+    <style>
+        .login{
+            margin-top: 200px;
+        }
+    </style>
+
+    <div class="container">
+
+        <div class="row justify-content-md-center">
+
+            <div class="col-md-4 login">
+                <form method="post" action="{{ path('create_login')}}">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary btn-lg btn-block">Login</button>
+                </form>
+                <div class="form-group">
+                </div>
+
+                <div class="form-group">
+                    <a href="{{ path('signup') }}" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Sign up</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
